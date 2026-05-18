@@ -1,37 +1,104 @@
-#Efeitos da Personalização Algorítmica na Diversidade de Exposição no YouTube
+# YouTube Recommendation Diversity Analysis
 
-Este repositório reúne os códigos, dados e resultados do experimento desenvolvido no Trabalho de Conclusão de Curso
+This repository contains the final experimental implementation developed for my undergraduate thesis focused on algorithmic personalization and recommendation diversity in digital platforms.
 
-##  Objetivo
-Investigar como diferentes estratégias de recomendação **Popularidade**, **Similaridade de Conteúdo** e **Diversidade (MMR)** afetam a diversidade e a cobertura de vídeos recomendados no YouTube.
+The project investigates how different recommendation strategies affect content diversity and recommendation coverage within YouTube recommendation scenarios.
 
-##  Estrutura do projeto
-- `src/`: scripts principais em Python (`gera_ratings_youtube.py` e `main_youtube.py`)
-- `data/`: dataset base (`USvideos.csv`) e resultados gerados (`metrics.csv`)
-- `results/`: gráficos e visualizações
-- `docs/`: artigo em LaTeX e referências bibliográficas
-- `requirements.txt`: dependências para reprodução do experimento
+---
 
-## Metodologia
-O experimento foi implementado em Python 3.12 com as bibliotecas:
-`pandas`, `numpy`, `scikit-learn`, `seaborn`, `matplotlib` e `tqdm`.
+## 📚 Research Objective
 
-O script `main_youtube.py` executa três modelos:
-1. **Popularidade** — baseia-se em engajamento global.
-2. **Similaridade** — recomenda vídeos com base em perfis de conteúdo.
-3. **Diversidade (MMR)** — reordena as recomendações para maximizar a variedade interna.
+The study evaluates how different recommendation approaches influence the diversity of recommended content using real-world YouTube trending data.
 
-## Resultados principais
-| Modelo | ILD | Cobertura |
-|---------|-----|------------|
-| Diversidade MMR | 0.0749 | 0.0455 |
-| Popularidade | 0.0565 | 0.0007 |
-| Similaridade | 0.0051 | 0.0119 |
+The following recommendation strategies were analyzed:
 
-O modelo **MMR** apresentou o melhor equilíbrio entre relevância e diversidade, aumentando substancialmente a pluralidade das recomendações.
+- Popularity-based recommendation
+- Content similarity recommendation
+- Diversity-oriented recommendation (MMR)
 
-## Referência
-Base de dados pública: [USvideos.csv - Kaggle](https://www.kaggle.com/datasets/datasnaek/youtube-new)
+---
 
-## Licença
-Distribuído sob a licença MIT — sinta-se à vontade para usar e adaptar.
+## 🛠️ Project Structure
+
+```bash
+youtube-recommendation-diversity-analysis/
+├── src/
+├── data/
+├── results/
+├── docs/
+└── requirements.txt
+```
+
+---
+
+## 🧠 Methodology
+
+The experiment was implemented using Python 3.12 and the following libraries:
+
+- pandas
+- numpy
+- scikit-learn
+- matplotlib
+- seaborn
+- tqdm
+
+The main experiment executes three recommendation models:
+
+### 1. Popularity Model
+Recommendations based on global engagement metrics.
+
+### 2. Similarity Model
+Recommendations generated through content similarity profiles.
+
+### 3. Diversity Model (MMR)
+Recommendations reordered using Maximal Marginal Relevance (MMR) to maximize internal diversity.
+
+---
+
+## 📊 Main Results
+
+| Model | ILD | Coverage |
+|------|------|------|
+| Diversity (MMR) | 0.0749 | 0.0455 |
+| Popularity | 0.0565 | 0.0007 |
+| Similarity | 0.0051 | 0.0119 |
+
+The MMR-based model achieved the best balance between recommendation relevance and content diversity.
+
+---
+
+## 📈 Metrics Used
+
+- Intra-List Diversity (ILD)
+- Catalog Coverage
+- Recommendation Diversity
+
+---
+
+## 🛠️ Tech Stack
+
+- Python
+- Pandas
+- NumPy
+- scikit-learn
+- Recommendation Systems
+- Data Analysis
+
+---
+
+## 📂 Dataset
+
+Public dataset used:
+[YouTube Trending Dataset - Kaggle](https://www.kaggle.com/datasets/datasnaek/youtube-new)
+
+---
+
+## 🎓 Academic Context
+
+This project was developed as part of an undergraduate thesis in Computer Science focused on algorithmic personalization and recommendation system diversity.
+
+---
+
+## 📄 License
+
+Distributed under the MIT License.
